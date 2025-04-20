@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { shadow } from "@/lib/utils";
+import { Button } from "./ui/button";
 
 function Header() {
   const user = null;
@@ -31,6 +32,12 @@ function Header() {
         ) : 
         (
           <>
+            <Button asChild>
+              <Link href="/sign-up" className="hidden sm:block">Sign Up</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="/login">Login</Link>
+            </Button>
           </>
         )
         }
